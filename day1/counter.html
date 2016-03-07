@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Counter</title>
+    <style type="text/css">
+      h1 {
+        font-size: 80px;
+        color: rgb(0, 128, 0);
+      }
+
+      button {
+        font-size: 26px;
+      }
+
+      .danger {
+        color: #ff0000;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 id="count" class="ok">0</h1>
+    <button id="plus">+</button>
+    <button id="minus">-</button>
+
+    <script type="text/javascript">
+      var current_count = 0;
+      // alert(current_count);
+
+      var plus_btn = document.getElementById("plus")
+      plus_btn.addEventListener("click", function() {
+        current_count = current_count + 1;
+        document.getElementById("count").innerHTML = current_count
+
+        if (current_count >= 10) {
+          document.getElementById("count").classList.add("danger")
+        }
+      })
+
+      var minus_btn = document.getElementById("minus")
+      minus_btn.addEventListener("click", function() {
+        current_count = current_count - 1;
+        document.getElementById("count").innerHTML = current_count
+
+        if (current_count < 10) {
+          document.getElementById("count").classList.remove("danger")
+        }
+      })
+    </script>
+  </body>
+</html>

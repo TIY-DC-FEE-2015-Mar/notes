@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My First Website</title>
+  <style type="text/css">
+    body {
+      background-color: #00beef;
+    }
+
+    p {
+      font-family: "Comic Sans", sans-serif;
+    }
+
+    #small-kitten {
+      width: 200px;
+    }
+
+    .highlighted {
+      color: rgb(200, 0, 0);
+      font-style: italic;
+    }
+
+    #not-really {
+      font-weight: normal;
+    }
+
+    .emphasize {
+      font-weight: bold;
+    }
+
+    img {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>This is a less profane website</h1>
+  <p class="highlighted emphasize" id="not-really">And it's okay</p>
+
+  <!-- Hey! Don't change this! -->
+  <h2>This is its subheader</h2>
+  <p>Ennui sriracha man braid cred. Intelligentsia organic locavore, skateboard yr <a href="https://en.wikipedia.org/wiki/Narwhal">narwhal</a> hella kickstarter iPhone thundercats bitters lo-fi church-key. Heirloom sriracha twee hella chambray. <br> Taxidermy man braid kitsch viral, chambray green juice letterpress try-hard brooklyn tumblr tilde. Taxidermy paleo biodiesel readymade authentic, next level normcore. Fixie church-key brunch single-origin coffee cliche. Stumptown</p>
+
+  <img src="https://pbs.twimg.com/profile_images/562466745340817408/_nIu8KHX.jpeg" title="Rollover text" alt="A Kitten" id="small-kitten">
+
+  <ol>
+    <li class="highlighted">First item</li>
+    <li>Other thing</li>
+    <li class="highlighted">Outside thing</li>
+  </ol>
+
+  <img src="http://theheightsanimalhospital.com/clients/15389/images/playful-kitten-6683.jpg">
+
+  <button id="click-btn">Click me!</button>
+
+
+  <script type="text/javascript">
+    document.getElementById("not-really").innerHTML = "And it's great!";
+
+    var x = 2;
+    alert("2 + 2 = " + (x + 2));
+
+    var btn = document.getElementById("click-btn");
+
+    btn.addEventListener("click", function() {
+      alert("You clicked the button");
+    });
+  </script>
+</body>
+
+
+
+
+
+
+
+</html>
