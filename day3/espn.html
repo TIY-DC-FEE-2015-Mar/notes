@@ -17,6 +17,9 @@
 
       li {
         list-style: none;
+      }
+
+      nav li {
         float: left;
         padding: 10px;
       }
@@ -25,17 +28,32 @@
         float: right;
       }
 
+      .left, .right {
+        box-sizing: border-box;
+        padding: 10px;
+        /*border: 1px solid black;*/
+      }
+
       .left {
         background-color: #cccccc;
+        float: left;
+        width: 40%;
       }
       .right {
         background-color: #999999;
+        float: right;
+        width: 60%;
       }
       /*.clearfix {
         clear: both;
         height: 10px;
         border-top: 1px dotted #fff;
       }*/
+
+      .container {
+        width: 80%;
+        margin: 0 auto;
+      }
     </style>
   </head>
   <body>
