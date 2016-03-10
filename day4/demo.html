@@ -18,6 +18,9 @@
       }
       .emph:hover {
         background-color: blue;
+        color: white;
+        border-radius: 50%;
+        transition: all 1s;
       }
       .emph::before, .emph::after {
         content: '"'
@@ -44,11 +47,24 @@
         color: white;
       }
 
+      h2 {
+        margin: 0 50px;
+      }
+
+      p {
+        margin: 5px 50px 20px;
+        font-size: 22px;
+      }
+
+      /*h2 + p {
+        background-color: blue;
+      }*/
+
       .col {
         float: left;
         background-color: #aaa;
         border: 1px solid black;
-        /*box-sizing: border-box;*/
+        box-sizing: border-box;
       }
       .col6 {
         width: 100%;
@@ -79,6 +95,15 @@
       ::selection {
         background-color: yellow;
       }
+
+      h2:target {
+        font-size: 30px;
+        color: red;
+      }
+
+      body {
+        padding-bottom: 1000px;
+      }
     </style>
   </head>
   <body>
@@ -90,6 +115,12 @@
       </ul>
     </nav>
 
+    <ul>
+      <li><a href="#first">First</a></li>
+      <li><a href="#second">Second</a></li>
+      <li><a href="#last">Last</a></li>
+    </ul>
+
     <div class="container">
       <div class="col col2">jalsdkj</div>
       <div class="col col2">asvaxcva</div>
@@ -100,16 +131,16 @@
       <div class="col col3">asvaxcva</div>
     </div>
 
-    <h2>First</h2>
+    <h2 id="first">First</h2>
     <p class="first">Now that we <span class="emph">know</span> who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass. </p>
 
-    <h2>Second</h2>
+    <h2 id="second">Second</h2>
     <p>You think water moves <span class="emph">fast</span>? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man. </p>
 
     <p>Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass. </p>
     <p>The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee. </p>
 
-    <h2>Last</h2>
+    <h2 id="last">Last</h2>
     <p>My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there. Then I'm gonna shoot that bitch in the kneecaps, find out where my goddamn money is. She gonna tell me too. Hey, look at me when I'm talking to you, motherfucker. You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand? </p>
   </body>
 </html>
