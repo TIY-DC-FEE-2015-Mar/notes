@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Transitions and transforms</title>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <style>
       * { margin: 0; padding: 0; }
 
@@ -33,17 +33,30 @@
         transform: rotate(45deg);
         opacity: 1;
       }
+
+      button {
+        padding: 10px;
+        border-radius: 3px;
+      }
     </style>
   </head>
   <body>
+    <!-- <i class="fa fa-pied-piper fa-5x"></i> -->
     <div class="object"></div>
-    <button class="btn">Circlify</button>
-    <button id="diamond-btn">Diamondize</button>
+    <button class="square" title="Reset">
+      <i class="fa fa-square fa-5x"></i>
+    </button>
+    <button class="btn" title="Circlify">
+      <i class="fa fa-adjust fa-5x"></i>
+    </button>
+    <button id="diamond-btn" title="Diamond">
+      <i class="fa fa-diamond fa-5x"></i>
+    </button>
 
     <script>
-      var button = document.querySelector(".btn");
       var obj = document.querySelector(".object");
 
+      var button = document.querySelector(".btn");
       button.addEventListener("click", function() {
         obj.className = "object circled"
       })
@@ -53,6 +66,11 @@
         // obj.className = "object diamond";
         obj.classList.remove("circled");
         obj.classList.add("diamond");
+      })
+
+      var sq = document.querySelector(".square")
+      sq.addEventListener("click", function() {
+        obj.className = "object"
       })
     </script>
   </body>
