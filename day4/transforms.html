@@ -15,6 +15,7 @@
         margin: 10px;
         box-sizing: border-box;
         opacity: 0;
+        transition: all 1s ease;
       }
 
       .circled {
@@ -23,19 +24,35 @@
         border-width: 0;
         margin-left: 300px;
         opacity: 1;
-        transition: all 1s;
+      }
+
+      .diamond {
+        border-radius: 0;
+        background-color: yellow;
+        margin-top: 200px;
+        transform: rotate(45deg);
+        opacity: 1;
       }
     </style>
   </head>
   <body>
     <div class="object"></div>
-    <button class="btn">Click me!</button>
+    <button class="btn">Circlify</button>
+    <button id="diamond-btn">Diamondize</button>
 
     <script>
       var button = document.querySelector(".btn");
+      var obj = document.querySelector(".object");
+
       button.addEventListener("click", function() {
-        var obj = document.querySelector(".object");
-        obj.classList.add("circled");
+        obj.className = "object circled"
+      })
+
+      var b2 = document.getElementById("diamond-btn")
+      b2.addEventListener("click", function() {
+        // obj.className = "object diamond";
+        obj.classList.remove("circled");
+        obj.classList.add("diamond");
       })
     </script>
   </body>
