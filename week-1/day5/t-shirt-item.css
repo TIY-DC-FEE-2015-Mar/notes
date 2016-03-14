@@ -1,0 +1,95 @@
+
+.item-list article {
+    width: 30%;
+    margin-right: 4%;
+    float: left;
+    position: relative;
+}
+
+.item-list article img {
+    width: 100%;
+    border: 2px solid #6ad;
+}
+
+.item-list nav {
+    border: 2px solid #6ad;
+    height: 3em;
+    margin-top: -6px;
+    width: 100%;
+}
+
+.item-list i {
+    display: inline-block;
+    width: 85%;
+    padding: 0.5em;
+}
+.item-list button:hover {
+    background-color: #6ad;
+}
+
+.item-list button {
+    display: block;
+    float: left;
+    height: 100%;
+    border: none;
+    border-right: 2px solid #6ad;
+    background: none;
+    cursor: pointer;
+    width: 20%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+.item-list button:last-child {
+    border: none;
+}
+
+.item-list .rotate {
+    position: absolute;
+    top: 0;
+    right: -2px;
+    width: 3em;
+    height: 3em;
+    border: none;
+    border-left: 2px solid #6ad;
+    border-bottom: 2px solid #6ad;
+}
+
+.item-list button aside {
+    display: none;
+    position: absolute;
+    bottom: 4.4em;
+    left: 0;
+    width: 95%;
+    border: 2px solid #6ad;
+    background-color: #fff;
+    padding-bottom: 1em;
+}
+.item-list button:hover aside {
+    display: block;
+}
+
+.item-list button ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.color li {
+    display: block;
+    width: 2em;
+    float: left;
+    height: 2em;
+    margin: 0.2em;
+}
+.color .red {
+    background-color: red;
+}
+.color .yellow {
+    background-color: yellow;
+}
+.color .blue {
+    background-color: blue;
+}
+.color .green {
+    background-color: green;
+}

@@ -1,0 +1,14 @@
+@import 't-shirt-base.css';
+@import 't-shirt-item.css';
+
+.nub {
+    border-bottom: 2px solid #6ad;
+    transform: rotate(45deg);
+    border-right: 2px solid #6ad;
+    width: 20%;
+    height: 20%;
+    background-color: #fff;
+    position: absolute;
+    bottom: -0.8em;
+    left: 40%;
+}

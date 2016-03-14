@@ -1,0 +1,12 @@
+body,html,main,section,article,div,nav{margin:0;padding:0;}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.item-list {
+    display: flex;
+    justify-content: space-between;
+    border: 1px siolid #eee;
+}
