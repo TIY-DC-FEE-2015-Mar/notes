@@ -1,0 +1,11 @@
+.item-list article {
+  width: 25%;
+  margin-right: 4%;
+  float: left;
+  position: relative; }
+
+.item-list article img {
+  width: 100%;
+  border: 2px solid #6ad; }
+
+/*# sourceMappingURL=t-shirts.css.map */
