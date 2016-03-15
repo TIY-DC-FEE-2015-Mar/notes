@@ -1,0 +1,47 @@
+
+.item-list {
+    article {
+        width: $desktopColumnWidth;
+        margin-right: 25% - $desktopColumnWidth;
+        float: left;
+        position: relative;
+
+        img {
+            width: 100%;
+            @include themeBorder;
+        }
+    }
+
+    button {
+        display: block;
+        float: left;
+        height: 100%;
+        border: none;
+        border-right: 2px solid $themeLightColor;
+        background: none;
+        cursor: pointer;
+        width: 20%;
+        padding: 0;
+        margin: 0;
+        position: relative;
+
+        &:hover {
+            background-color: $themeLightColor;
+        }
+    }
+}
+
+.swatches {
+    display: block;
+    @include square(2em);
+    float: left;
+    margin: 0.2em;
+}
+.red {
+    @extend .swatches;
+    background-color: red;
+}
+.yellow {
+    @extend .swatches;
+    background-color: yellow;
+}

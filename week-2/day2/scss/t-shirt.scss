@@ -1,16 +1,4 @@
 
-$themeLightColor: #6ad;
-$desktopColumnWidth: 25%;
-
-
-.item-list article {
-    width: $desktopColumnWidth;
-    margin-right: 4%;
-    float: left;
-    position: relative;
-}
-
-.item-list article img {
-    width: 100%;
-    border: 2px solid $themeLightColor;
-}
+@import "variables";
+@import "mixins";
+@import "product-item"
