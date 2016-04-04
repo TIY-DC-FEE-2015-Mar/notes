@@ -1,0 +1,9 @@
+
+.view {
+    display: none;
+}
+
+.btn-primary {
+    background-color: #ccf;
+    color: #333;
+}
