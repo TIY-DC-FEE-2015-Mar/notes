@@ -22,10 +22,19 @@
         test('results show with a valid query for searching', function(doneCallback) {
 
             assert.strictEqual( $('.results li').length, 0, 'results are empty to start' );
+
             var returnValue = window.foo.doSearch('jakerella', function testCallback() {
-                assert.strictEqual( typeof returnValue, 'undefined', 'on success no return value' );
-                assert.ok( $('.results li').length > 0, 'results exist' );
-                doneCallback();
+                var assertError;
+
+                try {
+                    assert.strictEqual( typeof returnValue, 'undefined', 'on success no return value' );
+                    assert.ok( $('.results li').length > 0, 'results exist' );
+                } catch(err) {
+                    assertError = err;
+                }
+
+                doneCallback(assertError);
+
             });
 
         });
