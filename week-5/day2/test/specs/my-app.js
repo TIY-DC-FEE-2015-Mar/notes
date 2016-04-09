@@ -18,8 +18,8 @@
         test('ensure sum handles unexpected data args', function() {
 
             assert.strictEqual( sum(), 0, 'no args results in zero sum' );
-            assert.ok( Number.isNaN( sum("foo") ), 'non-array arg results in NaN' );
-            assert.ok( Number.isNaN( sum(['a', 'b']) ), 'non-numeric array entries result in NaN' );
+            assert.ok( isNaN( sum("foo") ), 'non-array arg results in NaN' );
+            assert.ok( isNaN( sum(['a', 'b']) ), 'non-numeric array entries result in NaN' );
 
         });
 

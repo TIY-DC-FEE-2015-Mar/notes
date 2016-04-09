@@ -1,0 +1,9 @@
+{
+  "name": "tiy-fee-tests",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.1",
+    "grunt-mocha": "^1.0.1"
+  }
+}

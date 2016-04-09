@@ -4,7 +4,7 @@
     var x = 42;
 
     function foo(y) {
-        return x + y;
+        return x + y + z;
     }
 
     foo();
@@ -17,3 +17,5 @@
     console.log(x);
 
 })();
+
+//# sourceMappingURL=app.js.map

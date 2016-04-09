@@ -29,6 +29,10 @@
     <script src='specs/search.js'></script>
 
     <!-- Kick the whole thing off... -->
-    <script>mocha.run();</script>
+    <script>
+        if (navigator.userAgent.indexOf('PhantomJS') < 0) {
+            mocha.run();
+        }
+    </script>
 </body>
 </html>
