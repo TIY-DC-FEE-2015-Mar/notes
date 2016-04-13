@@ -14,7 +14,7 @@ module.exports = function(grunt) {
         mocha: {
             all: {
                 options: {
-                    src: [
+                    urls: [
                         'http://localhost:8888/test/my-app.html',
                         'http://localhost:8888/test/search.html'
                     ]
