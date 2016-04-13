@@ -2,6 +2,27 @@
     'use strict';
 
 
+    var theJSON;
+    try {
+        theJSON = JSON.parse(" ... ");
+    } catch(err) {
+        // handle the error somehow... log out the error
+        // but use some default value otherwise
+        theJSON = {};
+    }
+
+    var o = {
+        foo: theJSON
+    };
+
+
+    /**
+     * Add two numbers together
+     * @param {Number} x
+     * @param {Number} y
+     * @throws {Error}
+     * @return {Number} The sum
+     */
     function addNumbers(x, y) {
         if (!Number(x) || !Number(y)) {
             throw new Error('You must give me numbers! But you game me ' + x + ' & ' + y);
@@ -10,9 +31,16 @@
     }
 
     function addABunchOfNumbers(x, y, a, b) {
+        var resultOne = 0;
+        var resultTwo = 0;
 
-        var resultOne = addNumbers(x, y);
-        var resultTwo = addNumbers(a, b);
+        try {
+            resultOne = addNumbers(x, y);
+            resultTwo = addNumbers(a, b);
+        } catch(err) {
+            console.warn('umm... this no worky');
+            throw err;
+        }
 
         return resultOne + resultTwo;
     }
