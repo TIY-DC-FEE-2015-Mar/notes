@@ -1,0 +1,8 @@
+{
+    "results": [
+        { "id": 175, "name": "Alex" },
+        { "id": 336, "name": "Liz" },
+        { "id": 208, "name": "Ryan" }
+    ],
+    "next": "foobar"
+}
