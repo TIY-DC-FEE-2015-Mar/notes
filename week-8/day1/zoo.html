@@ -15,7 +15,35 @@
                 <h3 class='special-event'></h3>
             </header>
 
+            <section>
+                <h2>About Us</h2>
+                <p>Thanks for checking out our zoo online!</p>
+                <p>Here's some stuff about us...</p>
+            <section>
+
+            <section ng-controller='AdminController as admin'>
+                <h2>Tickets</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Age</th>
+                            <th>Cost</th>
+                            <th>Length</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat='ticket in admin.ticketTypes'>
+                            <td>{{ticket.age}}</td>
+                            <td>{{ticket.cost | currency}}</td>
+                            <td>{{ticket.length}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            <section>
+
             <section ng-controller='AnimalController as animalz'>
+                <h2>Our Animals</h2>
                 <ul>
                     <li ng-repeat='animal in animalz.list'>
                         {{animal.name}} ({{animal.species}})
