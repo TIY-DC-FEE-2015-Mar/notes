@@ -1,0 +1,9 @@
+<h2>Our Animals</h2>
+<ul>
+    <li ng-repeat='animal in animalz.list'>
+        {{animal.name}} ({{animal.species}})
+        [<a ui-sref='animals.animalDetail({ id: $index })'>detail</a>]
+    </li>
+</ul>
+
+<aside class='animal-detail' ui-view></aside>

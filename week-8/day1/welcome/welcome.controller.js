@@ -1,8 +1,6 @@
 (function() {
     'use strict';
 
-    console.log('wc');
-
     angular.module('zoo')
         .controller('WelcomeController', WelcomeController);
 
