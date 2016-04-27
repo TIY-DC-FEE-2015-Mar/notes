@@ -1,0 +1,9 @@
+
+<h2>Your Repos</h2>
+
+<ul>
+    <li ng-repeat='repo in repos.list'>
+        <a ui-sref='repoDetail({ id: repo.id })'>{{repo.name}}</a>
+        <!-- <a href='/repos/12345'>Foobar</a> -->
+    </li>
+</ul>

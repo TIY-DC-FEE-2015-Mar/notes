@@ -5,11 +5,26 @@
         <title>GitHub Info</title>
 
         <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+
+        <style>
+            input.ng-invalid {
+                border: 1px solid red;
+            }
+            main {
+                display: none;
+            }
+        </style>
     </head>
     <body>
         <main>
             <header ng-controller='WelcomeController as welcome'>
-                <h1>Hello {{user.name}}</h1>
+                <h1 ng-show='welcome.user'>Hello {{welcome.user.name}}</h1>
+
+                <p class='error' ng-show='welcome.message'>{{welcome.message}}</p>
+
+                <form novalidate ng-hide='welcome.user' ng-submit='welcome.login()'>
+                    <input type='text' placeholder='GitHub token' ng-model='welcome.token' required>
+                </form>
             </header>
 
             <section class='page-content' ui-view></section>
@@ -19,6 +34,9 @@
         <script src='http://angular-ui.github.io/ui-router/release/angular-ui-router.js'></script>
 
         <script src='app/gh.module.js'></script>
+        <script src='app/welcome.controller.js'></script>
+        <script src='app/github.service.js'></script>
+        <script src='repos/repoList.controller.js'></script>
 
     </body>
 </html>
