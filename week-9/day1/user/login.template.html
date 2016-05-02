@@ -1,5 +1,8 @@
 
-<form>
-    <label>Email:</label> <input type="text" name="name" value="">
-    <label>Password:</label> <input type="password" name="name" value="">
+<p class='message' ng-show='!!login.msg'>{{login.msg}}</p>
+
+<form novalidate name='loginForm' ng-submit='login.doLogin(loginForm)'>
+    <label>Email:</label> <input type="text" ng-model="login.user.email" required>
+    <label>Password:</label> <input type="password" ng-model="login.user.password" required>
+    <input type="submit">
 </form>

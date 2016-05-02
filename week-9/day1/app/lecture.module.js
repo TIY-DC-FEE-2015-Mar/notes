@@ -9,16 +9,39 @@
 
     function lectureConfig($stateProvider, $urlRouterProvider) {
 
-        $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/404');
 
         $stateProvider
             .state('home', {
                 url: '/',
                 template: '<p>This is home</p>'
             })
+            .state('error', {
+                url: '/oops',
+                templateUrl: 'app/error.template.html',
+                controller: 'ErrorController',
+                controllerAs: 'error',
+                params: {
+                    msg: 'Oops, something went horribly wrong!'
+                }
+            })
+            .state('404', {
+                url: '/404',
+                templateUrl: 'app/error.template.html',
+                controller: 'ErrorController',
+                controllerAs: 'error',
+                params: {
+                    msg: 'Sorry, but that page does not exist!'
+                }
+            })
             .state('login', {
                 url: '/login',
-                templateUrl: 'user/login.template.html'
+                templateUrl: 'user/login.template.html',
+                params: {
+                    msg: null
+                },
+                controller: 'LoginController',
+                controllerAs: 'login'
             })
             .state('my-profile', {
                 url: '/profile',
@@ -30,11 +53,11 @@
             });
     }
 
-    lectureStartup.$inject = ['$rootScope', '$state'];
-    function lectureStartup($rootScope, $state) {
+    lectureStartup.$inject = ['$rootScope', '$state', 'LoginService'];
+    function lectureStartup($rootScope, $state, LoginService) {
         $rootScope.$on('$stateChangeStart', function checkAuth(e, toState) {
 
-            var isLoggedIn = false;  // get this from a service!!
+            var isLoggedIn = LoginService.isLoggedIn();  // get this from a service!!
 
             if (toState.secure && !isLoggedIn) {
 
