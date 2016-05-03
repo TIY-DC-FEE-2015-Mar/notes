@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='en' ng-app='lecture'>
+    <head>
+        <meta charset='utf-8'>
+        <title>Week 9 Day 1</title>
+
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1>Week 9 - Day 2</h1>
+                <nav>
+                    <a ui-sref='clock'>Clock</a>
+                </nav>
+            </header>
+
+            <section class='page-content' ui-view></section>
+        </main>
+
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js'></script>
+        <script src='http://angular-ui.github.io/ui-router/release/angular-ui-router.js'></script>
+
+        <script src='app/lecture.module.js'></script>
+        <script src='app/clock.controller.js'></script>
+
+    </body>
+</html>
