@@ -5,6 +5,10 @@
 
 <ul>
     <li ng-repeat='emp in clock.employees'>
-        <aside biz-card info='emp'></aside>
+        <aside class='biz-card' biz-card info='emp' ng-click='emp.confirmClockIn=true'></aside>
+        <modal ng-show='emp.confirmClockIn'>
+            <p>Are you sure you want to clock {{emp.name}} in?</p>
+            <button ng-click='emp.confirmClockIn=false'>Cancel</button>
+        </modal>
     </li>
 </ul>
