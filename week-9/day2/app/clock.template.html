@@ -1,4 +1,10 @@
 
 <h2>The Time is...</h2>
 
-<my-time></my-time>
+<my-time format='"HH:mm"'></my-time>
+
+<ul>
+    <li ng-repeat='emp in clock.employees'>
+        <aside biz-card info='emp'></aside>
+    </li>
+</ul>

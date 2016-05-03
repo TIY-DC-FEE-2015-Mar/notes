@@ -9,16 +9,20 @@
         return {
             restrict: 'EA',
             templateUrl: 'app/my-time.template.html',
-            link: myTimeLink
+            link: myTimeLink,
+            scope: {
+                format: '='
+            }
         };
 
         function myTimeLink(scope, element, attributes, controller) {
+            console.log(attributes);
             updateTime();
             $interval( updateTime, 1000 );
 
             function updateTime() {
                 var now = new Date();
-                element[0].querySelector('time').innerText = dateFilter(now, 'HH:mm:ss');
+                element[0].querySelector('time').innerText = dateFilter(now, scope.format);
                 element[0].querySelector('.clock-face').style.backgroundColor = '#' + dateFilter(now, 'HHmmss');
             }
         }
