@@ -2,8 +2,7 @@
     'use strict';
 
     angular.module('lecture', ['ui.router'])
-        .config(lectureConfig)
-        .run(lectureStartup);
+        .config(lectureConfig);
 
     lectureConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
 
@@ -19,7 +18,7 @@
             .state('clock', {
                 url: '/clock',
                 templateUrl: 'app/clock.template.html',
-                controller: 'CLockController',
+                controller: 'ClockController',
                 controllerAs: 'clock'
             });
     }
