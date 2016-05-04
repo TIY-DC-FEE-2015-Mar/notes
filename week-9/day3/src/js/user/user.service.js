@@ -25,6 +25,11 @@
             });
         }
 
+        /**
+         * Logs a user in via an API call
+         * @param  {Object} user   contains email and password
+         * @return {Promise}       Fulfilled when login API request completes (with login data)
+         */
         function login(user) {
             return $http({
                 url: '/api/users/login',
