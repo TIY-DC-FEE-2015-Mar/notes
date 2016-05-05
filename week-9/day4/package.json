@@ -1,0 +1,15 @@
+{
+  "name": "test-express-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "express-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Jordan Kasper",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
